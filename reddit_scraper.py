@@ -77,11 +77,11 @@ def multireddit(subreddits, user, limit=5, orderby='score'):
         html += f'''
         <tr>
             <td>{str(index) + '.'}</td>
-            <td style="text-align: left"><a href="{LN}">{article['title']}</td>
+            <td style="text-align: left"><a href="{LN}">{article['title']}</a></td>
             <td style="text-align: right">Score: {article['score']}</td>
-            <td><a href="{cmLN}">Comments</td>
+            <td><a href="{cmLN}">Comments</a></td>
         </tr>'''
-    return html
+    return html+"</tbody></table>"
 
 
 if __name__ == '__main__':
