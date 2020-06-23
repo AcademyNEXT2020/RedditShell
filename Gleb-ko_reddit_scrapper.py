@@ -90,8 +90,8 @@ def main():
     print("Subreddit(s):", ", ".join(subreddits))
 
     headers = get_reddit_headers(user)
-    subreddit_api_ulrs = [ subreddit_to_api_url(subreddit) for subreddit in subreddits ]
-    subreddit_datas = [ get_subreddit_data(subreddit_api_ulr, headers) for subreddit_api_ulr in subreddit_api_ulrs ]
+    subreddit_api_urls = [ subreddit_to_api_url(subreddit) for subreddit in subreddits ]
+    subreddit_datas = [ get_subreddit_data(subreddit_api_url, headers) for subreddit_api_url in subreddit_api_urls ]
     subreddit_articles = sort_subreddit_articles(combine_arrays(
         *[
             get_subreddit_articles(subreddit_data)
